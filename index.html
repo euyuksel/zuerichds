@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAP Inspired Temporary Webpage</title>
+    <style>
+        /* Based on SAP Brand Colors (image_0.png, image_3.png) */
+        :root {
+            --sap-blue: #008FD3; /* Official SAP Blue */
+            --sap-dark-blue: #003A6F; /* For headers/text */
+            --sap-accent: #F2CC00; /* Gold/Orange accent */
+            --sap-light-grey: #F3F3F3; /* Backgrounds */
+            --sap-white: #FFFFFF;
+            --sap-text: #333333;
+        }
+
+        body {
+            font-family: '72', Arial, Helvetica, sans-serif; /* SAP's corporate font '72' or similar */
+            margin: 0;
+            padding: 0;
+            background-color: var(--sap-light-grey);
+            color: var(--sap-text);
+            line-height: 1.6;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--sap-dark-blue);
+            color: var(--sap-white);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 4px solid var(--sap-accent);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        /* --- Main Content --- */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* --- Link Cards (The Three Pages) --- */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .link-card {
+            background-color: var(--sap-white);
+            border: 1px solid #ddd;
+            border-radius: 4px; /* Slight round, clean lines */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s ease, transform 0.2s ease;
+            text-decoration: none; /* Make entire card clickable */
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .link-card:hover {
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            background-color: var(--sap-blue);
+            color: var(--sap-white);
+            padding: 15px 20px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .card-content p {
+            margin: 0 0 20px 0;
+        }
+
+        .card-action {
+            display: inline-block;
+            background-color: var(--sap-blue);
+            color: var(--sap-white);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-top: auto; /* Push to bottom */
+            transition: background-color 0.3s;
+        }
+
+        .link-card:hover .card-action {
+            background-color: var(--sap-dark-blue);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--sap-light-grey);
+            color: #777;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .main-container { margin: 20px auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>SAP Inspired Demo Project</h1>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="welcome-section">
+            <h2>Temporary Project Portal</h2>
+            <p>Welcome to this SAP-inspired conceptual webpage. This page is designed to quickly provide access to different sections of a temporary project. Below you will find three key links.</p>
+        </div>
+
+        <div class="links-grid">
+            <a href="page1.html" class="link-card">
+                <div class="card-header">
+                    Project Overview
+                </div>
+                <div class="card-content">
+                    <p>Access detailed documentation, project timelines, and initial scope of work for the current phase.</p>
+                    <span class="card-action">View Overview</span>
+                </div>
+            </a>
+
+            <a href="page2.html" class="link-card">
+                <div class="card-header">
+                    Data Analytics Dashboard
+                </div>
+                <div class="card-content">
+                    <p>Explore interactive data visualizations, key performance indicators, and dynamic reports.</p>
+                    <span class="card-action">Explore Data</span>
+                </div>
+            </a>
+
+            <a href="page3.html" class="link-card">
+                <div class="card-header">
+                    Team Collaboration Hub
+                </div>
+                <div class="card-content">
+                    <p>Connect with team members, access shared resources, and view internal communication channels.</p>
+                    <span class="card-action">Join Hub</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Zürich DS. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
